@@ -1,0 +1,56 @@
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 500px;
+  height: 500px;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  flex-direction: column;
+  background: linear-gradient(to bottom, #adadad, #dddddd);
+  display: flex;
+  height: 100vh;
+}
+.cell {
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+.btn--reset:hover {
+  text-decoration: none;
+  transform: scale(1.05);
+}
+.btn--reset {
+  transition: all 0.2s;
+  margin-top: 1rem;
+  color: black;
+  text-decoration: line-through;
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+  padding: 2rem 1.5rem;
+}
+@media only screen and (max-width: 990px) {
+  #board {
+    height: 50vh;
+    width: 70vw;
+  }
+  body {
+    height: 100vh;
+  }
+}
+.display {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
